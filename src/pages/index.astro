@@ -1,0 +1,289 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+---
+
+<Layout title="K2's GYM - Tu mejor opción para ponerte en forma">
+  <!-- Hero Section with Carousel -->
+  <section class="relative h-screen">
+    <div class="swiper hero-swiper h-full">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide relative">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80" alt="Gimnasio moderno" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-black opacity-50"></div>
+          <div class="relative z-10 h-full flex items-center justify-center text-center text-white px-4">
+            <div>
+              <h1 class="text-4xl md:text-6xl font-bold mb-4">Bienvenido a K2's GYM</h1>
+              <p class="text-xl md:text-2xl mb-8">Transforma tu cuerpo, transforma tu vida</p>
+              <a href="#rutinas" class="bg-gym-blue-600 hover:bg-gym-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-colors">
+                Comenzar
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide relative">
+          <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&q=80" alt="Equipamiento de gimnasio" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-black opacity-50"></div>
+          <div class="relative z-10 h-full flex items-center justify-center text-center text-white px-4">
+            <div>
+              <h2 class="text-4xl md:text-6xl font-bold mb-4">Equipamiento de Primera</h2>
+              <p class="text-xl md:text-2xl mb-8">Las mejores máquinas para tu entrenamiento</p>
+              <a href="#equipos" class="bg-gym-blue-600 hover:bg-gym-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-colors">
+                Ver Equipos
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide relative">
+          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80" alt="Entrenador personal" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-black opacity-50"></div>
+          <div class="relative z-10 h-full flex items-center justify-center text-center text-white px-4">
+            <div>
+              <h2 class="text-4xl md:text-6xl font-bold mb-4">Entrenadores Expertos</h2>
+              <p class="text-xl md:text-2xl mb-8">Guía profesional para alcanzar tus metas</p>
+              <a href="#entrenadores" class="bg-gym-blue-600 hover:bg-gym-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-colors">
+                Conoce al Equipo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <!-- Rutinas Section -->
+  <section id="rutinas" class="py-20 bg-white dark:bg-gray-800 transition-colors duration-200">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 text-gym-blue-900 dark:text-white">Nuestras Rutinas</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden transition-colors duration-200">
+          <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80" alt="Pérdida de peso" class="h-48 w-full object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 dark:text-white">Pérdida de Peso</h3>
+            <p class="text-gray-600 dark:text-gray-300">Programa intensivo de 12 semanas para quemar grasa y tonificar el cuerpo. Incluye plan nutricional personalizado.</p>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden transition-colors duration-200">
+          <img src="https://images.unsplash.com/photo-1532029837206-abbe2b7620e3?auto=format&fit=crop&q=80" alt="Ganancia muscular" class="h-48 w-full object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 dark:text-white">Ganancia Muscular</h3>
+            <p class="text-gray-600 dark:text-gray-300">Rutina de 16 semanas enfocada en hipertrofia muscular con énfasis en ejercicios compuestos y nutrición específica.</p>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden transition-colors duration-200">
+          <img src="https://images.unsplash.com/photo-1434596922112-19c563067271?auto=format&fit=crop&q=80" alt="Resistencia" class="h-48 w-full object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 dark:text-white">Resistencia</h3>
+            <p class="text-gray-600 dark:text-gray-300">Programa de 8 semanas para mejorar tu resistencia cardiovascular y muscular. Ideal para preparación de eventos deportivos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipos Section -->
+  <section id="equipos" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 text-gym-blue-900 dark:text-white">Equipamiento de Primera</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-4 transition-colors duration-200">
+          <img src="https://images.unsplash.com/photo-1638805981949-362f5964521e?auto=format&fit=crop&q=80" alt="Máquinas de peso" class="h-40 w-full object-cover rounded-lg mb-4" />
+          <h3 class="font-semibold mb-2 dark:text-white">Máquinas de Peso</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Equipamiento Technogym de última generación para entrenamiento de fuerza.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-4 transition-colors duration-200">
+          <img src="https://images.unsplash.com/photo-1586401100295-7a8096fd231a?auto=format&fit=crop&q=80" alt="Pesas libres" class="h-40 w-full object-cover rounded-lg mb-4" />
+          <h3 class="font-semibold mb-2 dark:text-white">Pesas Libres</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Amplia selección de mancuernas y barras para entrenamiento versátil.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-4 transition-colors duration-200">
+          <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&q=80" alt="Cardio" class="h-40 w-full object-cover rounded-lg mb-4" />
+          <h3 class="font-semibold mb-2 dark:text-white">Zona Cardio</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Caminadoras, elípticas y bicicletas con pantallas integradas.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-4 transition-colors duration-200">
+          <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&q=80" alt="Funcional" class="h-40 w-full object-cover rounded-lg mb-4" />
+          <h3 class="font-semibold mb-2 dark:text-white">Área Funcional</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Espacio equipado para entrenamiento funcional y CrossFit.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-4 transition-colors duration-200">
+          <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&q=80" alt="Yoga" class="h-40 w-full object-cover rounded-lg mb-4" />
+          <h3 class="font-semibold mb-2 dark:text-white">Sala de Yoga</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Espacio tranquilo y equipado para clases de yoga y pilates.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-4 transition-colors duration-200">
+          <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&q=80" alt="Spinning" class="h-40 w-full object-cover rounded-lg mb-4" />
+          <h3 class="font-semibold mb-2 dark:text-white">Sala de Spinning</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Bicicletas de spinning profesionales con monitor de rendimiento.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-4 transition-colors duration-200">
+          <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&q=80" alt="Boxeo" class="h-40 w-full object-cover rounded-lg mb-4" />
+          <h3 class="font-semibold mb-2 dark:text-white">Área de Boxeo</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Ring profesional y sacos de boxeo para entrenamiento de combate.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-4 transition-colors duration-200">
+          <img src="https://images.unsplash.com/photo-1570829460005-c840387bb1ca?auto=format&fit=crop&q=80" alt="Estiramiento" class="h-40 w-full object-cover rounded-lg mb-4" />
+          <h3 class="font-semibold mb-2 dark:text-white">Zona de Estiramiento</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Área dedicada para estiramientos y recuperación muscular.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Entrenadores Section -->
+  <section id="entrenadores" class="py-20 bg-white dark:bg-gray-800 transition-colors duration-200">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 text-gym-blue-900 dark:text-white">Nuestros Entrenadores</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <img src="https://images.unsplash.com/photo-1597347343908-2937e7dcc560?auto=format&fit=crop&q=80" alt="Carlos Rodríguez" class="w-48 h-48 mx-auto object-cover rounded-full mb-4" />
+          <h3 class="text-xl font-bold mb-2 dark:text-white">Carlos Rodríguez</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Especialista en musculación y nutrición deportiva</p>
+          <ul class="text-sm text-gray-500 dark:text-gray-400">
+            <li>✓ 8 años de experiencia</li>
+            <li>✓ Certificación NSCA</li>
+            <li>✓ Especialidad en hipertrofia</li>
+          </ul>
+        </div>
+        <div class="text-center">
+          <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&q=80" alt="Ana Martínez" class="w-48 h-48 mx-auto object-cover rounded-full mb-4" />
+          <h3 class="text-xl font-bold mb-2 dark:text-white">Ana Martínez</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Experta en pérdida de peso y fitness funcional</p>
+          <ul class="text-sm text-gray-500 dark:text-gray-400">
+            <li>✓ 6 años de experiencia</li>
+            <li>✓ Certificación ACE</li>
+            <li>✓ Especialidad en HIIT</li>
+          </ul>
+        </div>
+        <div class="text-center">
+          <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&q=80" alt="Miguel Torres" class="w-48 h-48 mx-auto object-cover rounded-full mb-4" />
+          <h3 class="text-xl font-bold mb-2 dark:text-white">Miguel Torres</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Instructor de CrossFit y preparación física</p>
+          <ul class="text-sm text-gray-500 dark:text-gray-400">
+            <li>✓ 5 años de experiencia</li>
+            <li>✓ CrossFit Level 2</li>
+            <li>✓ Especialidad en fuerza</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Horarios Section -->
+  <section id="horarios" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 text-gym-blue-900 dark:text-white">Horarios de Clases</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full bg-white dark:bg-gray-700 rounded-lg shadow-lg transition-colors duration-200">
+          <thead class="bg-gym-blue-600 text-white">
+            <tr>
+              <th class="py-4 px-6 text-left">Hora</th>
+              <th class="py-4 px-6">Lunes</th>
+              <th class="py-4 px-6">Martes</th>
+              <th class="py-4 px-6">Miércoles</th>
+              <th class="py-4 px-6">Jueves</th>
+              <th class="py-4 px-6">Viernes</th>
+            </tr>
+          </thead>
+          <tbody class="dark:text-gray-300">
+            <tr class="border-b dark:border-gray-600">
+              <td class="py-4 px-6 font-semibold">7:00</td>
+              <td class="py-4 px-6 text-center">Spinning</td>
+              <td class="py-4 px-6 text-center">CrossFit</td>
+              <td class="py-4 px-6 text-center">Yoga</td>
+              <td class="py-4 px-6 text-center">HIIT</td>
+              <td class="py-4 px-6 text-center">Body Pump</td>
+            </tr>
+            <tr class="border-b dark:border-gray-600">
+              <td class="py-4 px-6 font-semibold">9:00</td>
+              <td class="py-4 px-6 text-center">Yoga</td>
+              <td class="py-4 px-6 text-center">Pilates</td>
+              <td class="py-4 px-6 text-center">Zumba</td>
+              <td class="py-4 px-6 text-center">Boxing</td>
+              <td class="py-4 px-6 text-center">Funcional</td>
+            </tr>
+            <tr class="border-b dark:border-gray-600">
+              <td class="py-4 px-6 font-semibold">11:00</td>
+              <td class="py-4 px-6 text-center">HIIT</td>
+              <td class="py-4 px-6 text-center">Body Combat</td>
+              <td class="py-4 px-6 text-center">Spinning</td>
+              <td class="py-4 px-6 text-center">CrossFit</td>
+              <td class="py-4 px-6 text-center">Yoga</td>
+            </tr>
+            <tr class="border-b dark:border-gray-600">
+              <td class="py-4 px-6 font-semibold">17:00</td>
+              <td class="py-4 px-6 text-center">CrossFit</td>
+              <td class="py-4 px-6 text-center">Zumba</td>
+              <td class="py-4 px-6 text-center">Body Pump</td>
+              <td class="py-4 px-6 text-center">Pilates</td>
+              <td class="py-4 px-6 text-center">HIIT</td>
+            </tr>
+            <tr class="border-b dark:border-gray-600">
+              <td class="py-4 px-6 font-semibold">19:00</td>
+              <td class="py-4 px-6 text-center">Boxing</td>
+              <td class="py-4 px-6 text-center">HIIT</td>
+              <td class="py-4 px-6 text-center">Funcional</td>
+              <td class="py-4 px-6 text-center">Spinning</td>
+              <td class="py-4 px-6 text-center">CrossFit</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    import Swiper from 'swiper';
+    import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+    import 'swiper/css';
+    import 'swiper/css/navigation';
+    import 'swiper/css/pagination';
+
+    new Swiper '.hero-swiper', {
+      modules: [Navigation, Pagination, Autoplay],
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</Layout>
+
+<style>
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  :global(.swiper-button-next),
+  :global(.swiper-button-prev) {
+    color: white;
+  }
+
+  :global(.swiper-pagination-bullet) {
+    background: white;
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    background: var(--swiper-theme-color);
+  }
+</style>

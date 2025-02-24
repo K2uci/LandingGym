@@ -1,0 +1,138 @@
+---
+import '@fontsource-variable/inter';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="K2's GYM - Tu mejor opción para ponerte en forma" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
+    <header class="fixed w-full bg-white dark:bg-gray-800 shadow-md z-50 transition-colors duration-200">
+      <nav class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <a href="/" class="text-2xl font-bold text-gym-blue-600 dark:text-gym-blue-400 flex items-center transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-2" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"/>
+            </svg>
+            K2's GYM
+          </a>
+          <div class="flex items-center space-x-6">
+            <button id="theme-toggle" class="text-gray-600 dark:text-gray-300 hover:text-gym-blue-600 dark:hover:text-gym-blue-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              </svg>
+            </button>
+            <div class="hidden md:flex space-x-6">
+              <a href="#rutinas" class="text-gray-600 dark:text-gray-300 hover:text-gym-blue-600 dark:hover:text-gym-blue-400 transition-colors duration-200">Rutinas</a>
+              <a href="#equipos" class="text-gray-600 dark:text-gray-300 hover:text-gym-blue-600 dark:hover:text-gym-blue-400 transition-colors duration-200">Equipos</a>
+              <a href="#entrenadores" class="text-gray-600 dark:text-gray-300 hover:text-gym-blue-600 dark:hover:text-gym-blue-400 transition-colors duration-200">Entrenadores</a>
+              <a href="#horarios" class="text-gray-600 dark:text-gray-300 hover:text-gym-blue-600 dark:hover:text-gym-blue-400 transition-colors duration-200">Horarios</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gym-blue-600 dark:text-gym-blue-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+          <a href="#rutinas" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-gym-blue-600 dark:hover:text-gym-blue-400 transition-colors duration-200">Rutinas</a>
+          <a href="#equipos" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-gym-blue-600 dark:hover:text-gym-blue-400 transition-colors duration-200">Equipos</a>
+          <a href="#entrenadores" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-gym-blue-600 dark:hover:text-gym-blue-400 transition-colors duration-200">Entrenadores</a>
+          <a href="#horarios" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-gym-blue-600 dark:hover:text-gym-blue-400 transition-colors duration-200">Horarios</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="bg-gym-blue-900 dark:bg-gray-800 text-white py-12 mt-20 transition-colors duration-200">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">K2's GYM</h3>
+            <p class="text-gray-300">
+              Tu gimnasio de confianza para alcanzar tus metas fitness.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Horarios</h3>
+            <ul class="text-gray-300">
+              <li>Lunes a Viernes: 6:00 AM - 10:00 PM</li>
+              <li>Sábados: 8:00 AM - 8:00 PM</li>
+              <li>Domingos: 9:00 AM - 2:00 PM</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Contacto</h3>
+            <ul class="text-gray-300">
+              <li>📍 Av. Ejercito Nacional 253, Granada, Miguel Hidalgo</li>
+              <li>📞 (55) 5523-4789</li>
+              <li>✉️ info@k2sgym.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+          <p>&copy; {new Date().getFullYear()} K2's GYM. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const themeToggle = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+
+  // Theme toggle functionality
+  const theme = localStorage.getItem('theme') || 'light';
+  html.className = theme;
+
+  themeToggle?.addEventListener('click', () => {
+    const isDark = html.classList.contains('dark');
+    html.classList.toggle('dark', !isDark);
+    localStorage.setItem('theme', !isDark ? 'dark' : 'light');
+  });
+
+  // Mobile menu functionality
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  // Close mobile menu when clicking on a link
+  const mobileLinks = mobileMenu?.querySelectorAll('a');
+  mobileLinks?.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+    });
+  });
+</script>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter Variable', sans-serif;
+  }
+</style>
